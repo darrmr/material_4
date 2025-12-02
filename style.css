@@ -53,18 +53,18 @@
      padding: 20px 0 40px;
  }
 
-.masonry {
-  column-count: 3;
-  column-gap: 1em;
-}
+ .masonry {
+     column-count: 3;
+     column-gap: 1em;
+ }
 
-.masonry-item {
-  display: inline-block;
-  margin: 0 0 1em;
-  width: 100%;
-  background-color: #eee;
-  border: #1b5e20 3px solid;
-}
+ .masonry-item {
+     display: inline-block;
+     margin: 0 0 1em;
+     width: 100%;
+     background-color: #eee;
+     border: #1b5e20 3px solid;
+ }
 
  .masonry-item:hover {
      transform: translateY(-5px);
@@ -198,4 +198,82 @@
      color: #a5d6a7;
      font-size: 0.9rem;
      width: 100%;
+ }
+
+
+ @media (min-width: 320px) and (max-width: 640px) {
+     .link {
+         text-decoration: underline;
+     }
+ }
+
+ @media not screen and (height: 500px),
+ print and (height: 700px) {
+     .text {
+         color: tomato;
+     }
+ }
+
+ @media only screen and (max-width: 600px) {
+     body {
+         background-color: cornflowerblue;
+     }
+ }
+
+ @media (min-width: 680px) and (max-width: 1280px) {
+     p {
+         color: red;
+     }
+ }
+
+ @media (680px <=width <=1280px) {
+     p {
+         color: red;
+     }
+ }
+
+ @media (min-width: 520px) {
+     @media (max-width: 1080px) {
+         .cell {
+             background: peachpuff;
+         }
+     }
+ }
+
+ /* desktop first пример */
+ .text {
+     color: navy;
+     font-size: 18px;
+ }
+
+ @media (max-width: 1199px) {
+     .text {
+         color: darkblue;
+     }
+ }
+
+ @media (max-width: 991px) {
+     .text {
+         color: blue;
+     }
+ }
+
+ @media (max-width: 767px) {
+     .text {
+         color: royalblue;
+     }
+ }
+
+ @media (max-width: 575px) {
+     .text {
+         color: dodgerblue;
+         font-size: 16px;
+     }
+ }
+
+ @media (max-width: 399px) {
+     .text {
+         color: lightblue;
+         font-size: 14px;
+     }
  }
