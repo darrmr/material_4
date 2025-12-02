@@ -1,13 +1,74 @@
 .red {
+    height: 400px;
     background-color: rgb(149, 4, 4);
     padding: 10px;
     display: flex;
-    flex-flow: row wrap;
-    gap: 10px 30px;
+    align-items: flex-start;
 }
 
 .blue {
     width: 100px;
     height: 100px;
     background-color: blue;
+    align-self: flex-end;
+}
+
+.container {
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(3, 500px);
+}
+
+.container {
+    display: grid;
+    grid-template:
+        [row1-start] 25px [row1-end] [row2-start] 25px [row2-end] / auto 50px auto;
+    grid-template-areas:
+        "header header header"
+        "footer footer footer";
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 350px 1fr;
+    grid-template-rows: repeat(3, 150px);
+    /* Отступы между рядами */
+    row-gap: 50px;
+    /* Отступы между колонками */
+    column-gap: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 350px 1fr;
+    grid-template-rows: repeat(3, 150px);
+    gap: 50px 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: [one] 1fr [two] 1fr [three] 1fr 
+                           [four] 1fr [five] 1fr [six];
+    grid-template-rows: [row1-start] 1fr [row1-end] 1fr 1fr;
+}
+
+.item1 {
+    grid-column-start: 2;
+    grid-column-end: five;
+    grid-row-start: row1-start;
+    grid-row-end: 3;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: [first] 1fr [line2] 1fr [line3] 1fr [col4-start] 1fr [five] 1fr [end];
+  grid-template-rows: [row1-start] 1fr [row1-end] 1fr [third-line] 1fr [last-line];
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: span col4-start;
+  grid-row-start: 2;
+  grid-row-end: span 2;
 }
