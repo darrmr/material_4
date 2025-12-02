@@ -1,13 +1,13 @@
 .red {
     background-color: rgb(149, 4, 4);
-    margin: 10px;
+    padding: 10px;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
+    gap: 10px 30px;
 }
 
 .blue {
     width: 100px;
     height: 100px;
     background-color: blue;
-    margin: 10px;
 }
